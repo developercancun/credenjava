@@ -1,0 +1,46 @@
+v0.76 - 2004-04-11
+====================
+- Added a few new Languages
+- Changed Button into a Spinner-Control
+- Fixed Bug in Monthselector
+- Fixed Bug in Month/Year forward/back Button
+
+v0.751 - 2004-01-25
+========================
+- Addes new Languages: Chinese, Spanish
+- Fixed Bug: Muli-Monitor support
+
+v0.75 - 2003-11-30
+========================
+- Added new Class: JCalendarDialog
+- Added new Languages: Portuguese, Italien, Netherland
+- Fixed Bug : If JCalendarComboBox was reused, the Ancestor was wrong
+- Fixed Bug : Pressing Button while JCalendar was open got confused under
+              some circumstances
+
+v0.7 - 2003-11-09
+========================
+- Added new Methods: setVertical/Horizontal Alignment of Text in 
+  JCalendarComboBox Button
+- Added new Parameter "Flat" : Creats Flat/Beveled Buttons for
+  Next/Last Month Buttons
+- Added Language-Properties for ToolTips and Today-Button
+- Fixed Bug : XP L&F made Buttons look ugly (Thanks to Dennis Urech)
+- Fixed Bug : not fireing Event when only Month changed
+- Fixed Bug : not updating Button when changing Calendar using setCalendar()
+- Fixed Bug : focus-handling with Button/Window sometimes got confused
+
+v0.6 - 2003-10-26
+========================
+- Added new Method: setPopupLocation
+- Added Keyboard-Support
+- Added FocusLost-Handling
+- Added new Buttons left/right/current Day
+- Added Border around current Day
+
+v0.5 - 2003-10-12
+========================
+- First official Release
+
+Troggan's JCalendar and other stuff can be found here:
+http://www.wannawork.de

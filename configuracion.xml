@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<datasources>
+  <datasource>  	
+      <rutaFotos>t:\\gafetes\\fotos</rutaFotos>
+      <rutaCarpetaFotos>t:\\gafetes\\fotos</rutaCarpetaFotos>
+      <rutaFotoNoExiste>t:\\gafetes\\fotos\\unknow.jpg</rutaFotoNoExiste>   <passPhrase>123456</passPhrase>   
+  </datasource>
+</datasources>

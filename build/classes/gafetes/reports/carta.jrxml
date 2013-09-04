@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="845" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="style1" isDefault="false"/>
+	<subDataset name="Q1">
+		<parameter name="subParametro1" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[$P!{subParametro1}]]>
+		</queryString>
+		<field name="CLAVE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="PUESTO" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="RFC" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="IMSS" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="NOMBRE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="APELLIDOS" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="PHOTOFILE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="LOGOTIPO" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FONDO1" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FONDO2" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Q2">
+		<parameter name="subParametro2" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[$P!{subParametro2}]]>
+		</queryString>
+		<field name="CLAVE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="PUESTO" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="RFC" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="IMSS" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="NOMBRE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="APELLIDOS" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="PHOTOFILE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="LOGOTIPO" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FONDO1" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FONDO2" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Q3">
+		<parameter name="subParametro3" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[$P!{subParametro3}]]>
+		</queryString>
+		<field name="CLAVE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="PUESTO" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="RFC" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="IMSS" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="NOMBRE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="APELLIDOS" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="PHOTOFILE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="LOGOTIPO" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FONDO1" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FONDO2" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="SQLQUERY" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["SELECT COUNT(ID) FROM BADGE_USUARIOS"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SQLQUERY1" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["SELECT  E.CLAVE, E.NOMBRE, E.APELLIDOS, E.PUESTO,  E.RFC, E.IMSS,  E.PHOTOFILE,  T.LOGOTIPO, T.FONDO1, T.FONDO2 FROM BADGE_EMPLEADOS E INNER JOIN BADGE_TEMPLATES T ON E.TEMPLATE = T.ID WHERE CLAVE='1189160'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SQLQUERY2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["SELECT  E.CLAVE, E.NOMBRE, E.APELLIDOS, E.PUESTO,  E.RFC, E.IMSS,  E.PHOTOFILE,  T.LOGOTIPO, T.FONDO1, T.FONDO2 FROM BADGE_EMPLEADOS E INNER JOIN BADGE_TEMPLATES T ON E.TEMPLATE = T.ID "]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SQLQUERY3" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["SELECT  E.CLAVE, E.NOMBRE, E.APELLIDOS, E.PUESTO,  E.RFC, E.IMSS,  E.PHOTOFILE,  T.LOGOTIPO, T.FONDO1, T.FONDO2  FROM BADGE_EMPLEADOS E INNER JOIN BADGE_TEMPLATES T ON E.TEMPLATE = T.ID WHERE CLAVE='1189160'"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{SQLQUERY}]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="282" splitType="Stretch">
+			<componentElement>
+				<reportElement x="28" y="16" width="162" height="265"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Q1">
+						<datasetParameter name="subParametro1">
+							<datasetParameterExpression><![CDATA[$P{SQLQUERY1}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:listContents height="265" width="162">
+						<rectangle>
+							<reportElement x="5" y="0" width="153" height="240"/>
+							<graphicElement>
+								<pen lineStyle="Dashed"/>
+							</graphicElement>
+						</rectangle>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-1" mode="Transparent" x="5" y="152" width="153" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-2" mode="Transparent" x="5" y="166" width="153" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{APELLIDOS}]]></textFieldExpression>
+						</textField>
+						<componentElement>
+							<reportElement x="6" y="211" width="150" height="23"/>
+							<jr:barbecue type="Code128" drawText="false" checksumRequired="false">
+								<jr:codeExpression><![CDATA[$F{IMSS}]]></jr:codeExpression>
+							</jr:barbecue>
+						</componentElement>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="25" y="2" width="112" height="40" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{LOGOTIPO}]]></imageExpression>
+						</image>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="5" y="179" width="154" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{FONDO1}]]></imageExpression>
+						</image>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="36" y="48" width="90" height="103" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{FONDO2}]]></imageExpression>
+						</image>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-1" mode="Opaque" x="41" y="52" width="81" height="95" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{PHOTOFILE}]]></imageExpression>
+						</image>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-3" mode="Transparent" x="5" y="179" width="153" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{PUESTO}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="213" y="16" width="162" height="265"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Q2">
+						<datasetParameter name="subParametro2">
+							<datasetParameterExpression><![CDATA[$P{SQLQUERY2}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:listContents height="265" width="162">
+						<rectangle>
+							<reportElement x="5" y="0" width="153" height="240"/>
+							<graphicElement>
+								<pen lineStyle="Dashed"/>
+							</graphicElement>
+						</rectangle>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-1" mode="Transparent" x="5" y="152" width="153" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-2" mode="Transparent" x="5" y="166" width="153" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{APELLIDOS}]]></textFieldExpression>
+						</textField>
+						<componentElement>
+							<reportElement x="6" y="211" width="150" height="23"/>
+							<jr:barbecue type="Code128" drawText="false" checksumRequired="false">
+								<jr:codeExpression><![CDATA[$F{IMSS}]]></jr:codeExpression>
+							</jr:barbecue>
+						</componentElement>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="25" y="2" width="112" height="40" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{LOGOTIPO}]]></imageExpression>
+						</image>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="5" y="179" width="154" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{FONDO1}]]></imageExpression>
+						</image>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-3" mode="Transparent" x="5" y="179" width="153" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{PUESTO}]]></textFieldExpression>
+						</textField>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="36" y="48" width="90" height="103" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{FONDO2}]]></imageExpression>
+						</image>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-1" mode="Opaque" x="41" y="52" width="81" height="95" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{PHOTOFILE}]]></imageExpression>
+						</image>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="394" y="16" width="162" height="265"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Q3">
+						<datasetParameter name="subParametro3">
+							<datasetParameterExpression><![CDATA[$P{SQLQUERY3}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:listContents height="265" width="162">
+						<rectangle>
+							<reportElement x="5" y="0" width="153" height="240"/>
+							<graphicElement>
+								<pen lineStyle="Dashed"/>
+							</graphicElement>
+						</rectangle>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-1" mode="Transparent" x="5" y="152" width="153" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-2" mode="Transparent" x="5" y="166" width="153" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{APELLIDOS}]]></textFieldExpression>
+						</textField>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-1" mode="Opaque" x="41" y="52" width="81" height="95" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{PHOTOFILE}]]></imageExpression>
+						</image>
+						<componentElement>
+							<reportElement x="6" y="211" width="150" height="23"/>
+							<jr:barbecue type="Code128" drawText="false" checksumRequired="false">
+								<jr:codeExpression><![CDATA[$F{IMSS}]]></jr:codeExpression>
+							</jr:barbecue>
+						</componentElement>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="25" y="2" width="112" height="40" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{LOGOTIPO}]]></imageExpression>
+						</image>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="5" y="179" width="154" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{FONDO1}]]></imageExpression>
+						</image>
+						<textField pattern="" isBlankWhenNull="false">
+							<reportElement key="textField-3" mode="Transparent" x="5" y="179" width="153" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single">
+								<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{PUESTO}]]></textFieldExpression>
+						</textField>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-2" mode="Opaque" x="36" y="48" width="90" height="103" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{FONDO2}]]></imageExpression>
+						</image>
+						<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+							<reportElement key="image-1" mode="Opaque" x="41" y="52" width="81" height="95" forecolor="#000000" backcolor="#FFFFFF"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.0" lineStyle="Solid"/>
+							</graphicElement>
+							<imageExpression class="java.lang.String"><![CDATA[$F{PHOTOFILE}]]></imageExpression>
+						</image>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
